@@ -23,9 +23,9 @@ int Game::situation(char side) {
 
 //	一点的权重
 //	越靠近中心权重越大（与该点到中心的曼哈顿距离负相关）
-int Game::point_weight(int i, int j) {
-	return board_height / 2 + board_width / 2 - abs(i - board_height / 2) - abs(j - board_width / 2);
-}
+//int Game::point_weight(int i, int j) {
+//	return board_height / 2 + board_width / 2 - abs(i - board_height / 2) - abs(j - board_width / 2);
+//}
 
 //	以该位置为中心2*2的区域内是否有其他棋子
 //	用此函数进行筛选能够大大地减少分支的数量
@@ -156,7 +156,7 @@ int Game::point_score(int i, int j, char side) {
 			}
 	}
 
-	return score * point_weight(i, j);
+	return score;// *point_weight(i, j);
 }
 
 //	带alpha-beta剪枝的minmax搜索

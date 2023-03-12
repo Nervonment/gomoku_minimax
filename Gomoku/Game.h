@@ -50,11 +50,11 @@ private:
 	
 	//	ËÑË÷Ëã·¨²¿·Ö
 
-	int		max_search_depth	= 1;
+	int		max_search_depth	= 2;
 	POINT	ai_drop_pos			= { 0,0 };
-
+public:
 	int situation(char side);
-	int point_weight(int i, int j);
+	//int point_weight(int i, int j);
 	bool is_nearby(int i, int j);
 	int point_score(int i, int j, char side);
 	int search_max(int depth, char side, int parent_beta);
